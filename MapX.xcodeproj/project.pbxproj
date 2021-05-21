@@ -10,17 +10,20 @@
 		4B1B318326578DAC0012A292 /* RouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B318226578DAC0012A292 /* RouteBuilder.swift */; };
 		4B1B318526578DFF0012A292 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B318426578DFF0012A292 /* Route.swift */; };
 		4B1B318726578E190012A292 /* RouteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B318626578E190012A292 /* RouteAnnotation.swift */; };
+		4B1B3189265791450012A292 /* MapKitNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B3188265791450012A292 /* MapKitNavViewController.swift */; };
+		4B1B318B265792040012A292 /* MapKitNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B318A265792040012A292 /* MapKitNavViewController.xib */; };
 		4B518B4626575123007F4F1F /* NavSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B518B4526575123007F4F1F /* NavSelectionViewController.xib */; };
 		4B518B492657649E007F4F1F /* UITextField+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B482657649E007F4F1F /* UITextField+Ex.swift */; };
 		4B518B4B265765D7007F4F1F /* CLPlacemark+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */; };
 		4B518B4E2657860E007F4F1F /* UIButton+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B4D2657860E007F4F1F /* UIButton+Ex.swift */; };
 		4B518B502657864C007F4F1F /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B4F2657864C007F4F1F /* UIColor+Ex.swift */; };
+		4B9198412657949A0092C971 /* TimeTravel+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9198402657949A0092C971 /* TimeTravel+Ex.swift */; };
 		4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF484C2654E9840047032F /* AppDelegate.swift */; };
 		4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF484E2654E9840047032F /* SceneDelegate.swift */; };
 		4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48502654E9840047032F /* NavSelectionViewController.swift */; };
 		4BCF48562654E9840047032F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48552654E9840047032F /* Assets.xcassets */; };
 		4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48572654E9840047032F /* LaunchScreen.storyboard */; };
-		4BCF48612654EEF60047032F /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48602654EEF60047032F /* BasicViewController.swift */; };
+		4BCF48612654EEF60047032F /* MapboxNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48602654EEF60047032F /* MapboxNavViewController.swift */; };
 		ABF1856AC94F5BFD4C7B4012 /* Pods_MapX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ADFB190E1DE9628EDA4988 /* Pods_MapX.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,11 +31,14 @@
 		4B1B318226578DAC0012A292 /* RouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteBuilder.swift; sourceTree = "<group>"; };
 		4B1B318426578DFF0012A292 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		4B1B318626578E190012A292 /* RouteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteAnnotation.swift; sourceTree = "<group>"; };
+		4B1B3188265791450012A292 /* MapKitNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitNavViewController.swift; sourceTree = "<group>"; };
+		4B1B318A265792040012A292 /* MapKitNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapKitNavViewController.xib; sourceTree = "<group>"; };
 		4B518B4526575123007F4F1F /* NavSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavSelectionViewController.xib; sourceTree = "<group>"; };
 		4B518B482657649E007F4F1F /* UITextField+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ex.swift"; sourceTree = "<group>"; };
 		4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Ex.swift"; sourceTree = "<group>"; };
 		4B518B4D2657860E007F4F1F /* UIButton+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ex.swift"; sourceTree = "<group>"; };
 		4B518B4F2657864C007F4F1F /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		4B9198402657949A0092C971 /* TimeTravel+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTravel+Ex.swift"; sourceTree = "<group>"; };
 		4BCF48492654E9840047032F /* MapX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCF484C2654E9840047032F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCF484E2654E9840047032F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +46,7 @@
 		4BCF48552654E9840047032F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BCF48582654E9840047032F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BCF485A2654E9840047032F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BCF48602654EEF60047032F /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		4BCF48602654EEF60047032F /* MapboxNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxNavViewController.swift; sourceTree = "<group>"; };
 		93ADFB190E1DE9628EDA4988 /* Pods_MapX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B944E2CE0E3BBA65069D5A /* Pods-MapX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapX.release.xcconfig"; path = "Target Support Files/Pods-MapX/Pods-MapX.release.xcconfig"; sourceTree = "<group>"; };
 		B48016FD89ACEBE9EA54AE20 /* Pods-MapX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapX.debug.xcconfig"; path = "Target Support Files/Pods-MapX/Pods-MapX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				4BCF48502654E9840047032F /* NavSelectionViewController.swift */,
-				4BCF48602654EEF60047032F /* BasicViewController.swift */,
+				4BCF48602654EEF60047032F /* MapboxNavViewController.swift */,
+				4B1B3188265791450012A292 /* MapKitNavViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 				4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */,
 				4B518B4D2657860E007F4F1F /* UIButton+Ex.swift */,
 				4B518B4F2657864C007F4F1F /* UIColor+Ex.swift */,
+				4B9198402657949A0092C971 /* TimeTravel+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 		4B518B4C26576BEA007F4F1F /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				4B1B318A265792040012A292 /* MapKitNavViewController.xib */,
 				4B518B4526575123007F4F1F /* NavSelectionViewController.xib */,
 			);
 			path = Xibs;
@@ -238,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1B318B265792040012A292 /* MapKitNavViewController.xib in Resources */,
 				4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */,
 				4BCF48562654E9840047032F /* Assets.xcassets in Resources */,
 				4B518B4626575123007F4F1F /* NavSelectionViewController.xib in Resources */,
@@ -299,7 +309,9 @@
 				4B1B318526578DFF0012A292 /* Route.swift in Sources */,
 				4B1B318726578E190012A292 /* RouteAnnotation.swift in Sources */,
 				4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */,
-				4BCF48612654EEF60047032F /* BasicViewController.swift in Sources */,
+				4B1B3189265791450012A292 /* MapKitNavViewController.swift in Sources */,
+				4BCF48612654EEF60047032F /* MapboxNavViewController.swift in Sources */,
+				4B9198412657949A0092C971 /* TimeTravel+Ex.swift in Sources */,
 				4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */,
 				4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */,
 				4B1B318326578DAC0012A292 /* RouteBuilder.swift in Sources */,

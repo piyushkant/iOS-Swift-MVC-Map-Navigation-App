@@ -182,9 +182,8 @@ class NavSelectionViewController: UIViewController {
             
             switch result {
             case .success(let route):
-                print("fetchedRoute", route)
-//                let viewController = DirectionsViewController(route: route)
-//                self.present(viewController, animated: true)
+                let viewController = MapKitNavViewController(route: route)
+                self.present(viewController, animated: true)
                 
             case .failure(let error):
                 let errorMessage: String

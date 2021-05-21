@@ -13,7 +13,7 @@ import MapboxDirections
 
 var simulationIsEnabled = true
 
-class BasicViewController: UIViewController {
+class MapboxNavViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
