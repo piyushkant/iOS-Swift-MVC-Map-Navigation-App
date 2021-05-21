@@ -31,9 +31,12 @@ class NavSelectionViewController: UIViewController {
     private var currentPlace: CLPlacemark?
     
     private let locationManager = CLLocationManager()
+    private let searchCompleter = MKLocalSearchCompleter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchCompleter.delegate = self
         
         setupUI()
         trytLocationAccess()
@@ -87,13 +90,13 @@ class NavSelectionViewController: UIViewController {
         guard let query = field.contents else {
             hideSuggestionView(animated: true)
             
-            //        if completer.isSearching {
-            //          completer.cancel()
-            //        }
+            if searchCompleter.isSearching {
+                searchCompleter.cancel()
+            }
             return
         }
         
-        //      completer.queryFragment = query
+        searchCompleter.queryFragment = query
     }
     
     private func setupGestures() {
@@ -168,6 +171,15 @@ class NavSelectionViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
+    private func showSuggestion(_ suggestion: String) {
+        suggestionLabel.text = suggestion
+        suggestionContainerTopConstraint.constant = -4 // to hide the top corners
+        
+        UIView.animate(withDuration: defaultAnimationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -191,7 +203,7 @@ extension NavSelectionViewController: CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: firstLocation.coordinate, span: span)
         
         currentRegion = region
-//        completer.region = region
+        searchCompleter.region = region
         
         CLGeocoder().reverseGeocodeLocation(firstLocation) { places, _ in
             guard let firstPlace = places?.first, self.startTextField.contents == nil else {
@@ -208,15 +220,31 @@ extension NavSelectionViewController: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - MKLocalSearchCompleterDelegate
+
+extension NavSelectionViewController: MKLocalSearchCompleterDelegate {
+    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
+        guard let firstResult = completer.results.first else {
+            return
+        }
+        
+        showSuggestion(firstResult.title)
+    }
+    
+    func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: Error) {
+        print("Error suggesting a location: \(error.localizedDescription)")
+    }
+}
+
 // MARK: - UITextFieldDelegate
 
 extension NavSelectionViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         hideSuggestionView(animated: true)
         
-        //        if completer.isSearching {
-        //            completer.cancel()
-        //        }
+        if searchCompleter.isSearching {
+            searchCompleter.cancel()
+        }
         
         editingTextField = textField
     }

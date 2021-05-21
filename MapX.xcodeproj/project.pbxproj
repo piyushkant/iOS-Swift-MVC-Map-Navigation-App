@@ -77,7 +77,6 @@
 		4B518B4126574F26007F4F1F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B518B4526575123007F4F1F /* NavSelectionViewController.xib */,
 				4BCF48502654E9840047032F /* NavSelectionViewController.swift */,
 				4BCF48602654EEF60047032F /* BasicViewController.swift */,
 			);
@@ -95,6 +94,8 @@
 		4B518B4326574F5A007F4F1F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B518B4226574F42007F4F1F /* Storyboards */,
+				4B518B4C26576BEA007F4F1F /* Xibs */,
 				4BCF48552654E9840047032F /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -114,6 +115,14 @@
 				4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B518B4C26576BEA007F4F1F /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				4B518B4526575123007F4F1F /* NavSelectionViewController.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		4BCF48402654E9840047032F = {
@@ -140,7 +149,6 @@
 				4B518B4726576473007F4F1F /* Extensions */,
 				4B518B4426575035007F4F1F /* Groups */,
 				4B518B4326574F5A007F4F1F /* Resources */,
-				4B518B4226574F42007F4F1F /* Storyboards */,
 				4B518B4126574F26007F4F1F /* Controllers */,
 				4B518B4026574F11007F4F1F /* App */,
 				4BCF485A2654E9840047032F /* Info.plist */,
