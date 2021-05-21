@@ -63,6 +63,7 @@ class NavSelectionViewController: UIViewController {
         setupGestures()
         setupNotifications()
         hideSuggestionView(animated: false)
+        navigateButton.setStyle()
     }
     
     private func setupTextFields() {
@@ -133,7 +134,6 @@ class NavSelectionViewController: UIViewController {
         hideSuggestionView(animated: true)
                 
         editingTextField?.text = suggestionLabel.text
-//        editingTextField = nil
     }
     
     private func hideSuggestionView(animated: Bool) {
