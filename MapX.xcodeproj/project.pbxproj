@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B518B4626575123007F4F1F /* NavSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B518B4526575123007F4F1F /* NavSelectionViewController.xib */; };
 		4B518B492657649E007F4F1F /* UITextField+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B482657649E007F4F1F /* UITextField+Ex.swift */; };
+		4B518B4B265765D7007F4F1F /* CLPlacemark+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */; };
 		4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF484C2654E9840047032F /* AppDelegate.swift */; };
 		4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF484E2654E9840047032F /* SceneDelegate.swift */; };
 		4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48502654E9840047032F /* NavSelectionViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		4B518B4526575123007F4F1F /* NavSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavSelectionViewController.xib; sourceTree = "<group>"; };
 		4B518B482657649E007F4F1F /* UITextField+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ex.swift"; sourceTree = "<group>"; };
+		4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Ex.swift"; sourceTree = "<group>"; };
 		4BCF48492654E9840047032F /* MapX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCF484C2654E9840047032F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCF484E2654E9840047032F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4B518B482657649E007F4F1F /* UITextField+Ex.swift */,
+				4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B518B4B265765D7007F4F1F /* CLPlacemark+Ex.swift in Sources */,
 				4B518B492657649E007F4F1F /* UITextField+Ex.swift in Sources */,
 				4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */,
 				4BCF48612654EEF60047032F /* BasicViewController.swift in Sources */,

@@ -30,10 +30,28 @@ class NavSelectionViewController: UIViewController {
     private var currentRegion: MKCoordinateRegion?
     private var currentPlace: CLPlacemark?
     
+    private let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        trytLocationAccess()
+    }
+    
+    private func trytLocationAccess() {
+        guard CLLocationManager.locationServicesEnabled() else {
+            return
+        }
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.delegate = self
+        
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        } else {
+            locationManager.requestLocation()
+        }
     }
     
     // MARK: - UI
@@ -149,6 +167,44 @@ class NavSelectionViewController: UIViewController {
         UIView.animate(withDuration: defaultAnimationDuration) {
             self.view.layoutIfNeeded()
         }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension NavSelectionViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard status == .authorizedWhenInUse else {
+            return
+        }
+        
+        manager.requestLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let firstLocation = locations.first else {
+            return
+        }
+        
+        let commonDelta: CLLocationDegrees = 25 / 111 // 1/111 = 1 latitude km
+        let span = MKCoordinateSpan(latitudeDelta: commonDelta, longitudeDelta: commonDelta)
+        let region = MKCoordinateRegion(center: firstLocation.coordinate, span: span)
+        
+        currentRegion = region
+//        completer.region = region
+        
+        CLGeocoder().reverseGeocodeLocation(firstLocation) { places, _ in
+            guard let firstPlace = places?.first, self.startTextField.contents == nil else {
+                return
+            }
+            
+            self.currentPlace = firstPlace
+            self.startTextField.text = firstPlace.shortAddress
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error requesting location: \(error.localizedDescription)")
     }
 }
 
