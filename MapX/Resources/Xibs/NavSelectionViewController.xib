@@ -34,18 +34,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="QJC-UO-3EZ">
-                    <rect key="frame" x="95" y="509" width="185" height="30"/>
+                    <rect key="frame" x="142.5" y="509" width="90" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-QQ-EH1">
-                            <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
                             <color key="backgroundColor" red="0.28627450980392155" green="0.4392156862745098" blue="0.74901960784313726" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                            <state key="normal" title="Navigate using MapKit">
+                            <state key="normal" title="Navigate">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="navigateButtonTapped" destination="-1" eventType="touchUpInside" id="tci-cK-qbk"/>
+                            </connections>
                         </button>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-Ff-5iJ">
-                            <rect key="frame" x="165" y="0.0" width="20" height="30"/>
+                            <rect key="frame" x="70" y="0.0" width="20" height="30"/>
                         </activityIndicatorView>
                     </subviews>
                 </stackView>

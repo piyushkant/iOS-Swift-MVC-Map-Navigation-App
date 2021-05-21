@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1B318326578DAC0012A292 /* RouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B318226578DAC0012A292 /* RouteBuilder.swift */; };
+		4B1B318526578DFF0012A292 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B318426578DFF0012A292 /* Route.swift */; };
+		4B1B318726578E190012A292 /* RouteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B318626578E190012A292 /* RouteAnnotation.swift */; };
 		4B518B4626575123007F4F1F /* NavSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B518B4526575123007F4F1F /* NavSelectionViewController.xib */; };
 		4B518B492657649E007F4F1F /* UITextField+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B482657649E007F4F1F /* UITextField+Ex.swift */; };
 		4B518B4B265765D7007F4F1F /* CLPlacemark+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B1B318226578DAC0012A292 /* RouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteBuilder.swift; sourceTree = "<group>"; };
+		4B1B318426578DFF0012A292 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4B1B318626578E190012A292 /* RouteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteAnnotation.swift; sourceTree = "<group>"; };
 		4B518B4526575123007F4F1F /* NavSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavSelectionViewController.xib; sourceTree = "<group>"; };
 		4B518B482657649E007F4F1F /* UITextField+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ex.swift"; sourceTree = "<group>"; };
 		4B518B4A265765D7007F4F1F /* CLPlacemark+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Ex.swift"; sourceTree = "<group>"; };
@@ -69,6 +75,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4B1B318126578D9C0012A292 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4B1B318226578DAC0012A292 /* RouteBuilder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4B518B4026574F11007F4F1F /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +119,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4B518B4426575035007F4F1F /* Groups */ = {
+		4B518B4426575035007F4F1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B1B318426578DFF0012A292 /* Route.swift */,
+				4B1B318626578E190012A292 /* RouteAnnotation.swift */,
 			);
-			path = Groups;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4B518B4726576473007F4F1F /* Extensions */ = {
@@ -152,8 +168,9 @@
 		4BCF484B2654E9840047032F /* MapX */ = {
 			isa = PBXGroup;
 			children = (
+				4B1B318126578D9C0012A292 /* Helpers */,
 				4B518B4726576473007F4F1F /* Extensions */,
-				4B518B4426575035007F4F1F /* Groups */,
+				4B518B4426575035007F4F1F /* Models */,
 				4B518B4326574F5A007F4F1F /* Resources */,
 				4B518B4126574F26007F4F1F /* Controllers */,
 				4B518B4026574F11007F4F1F /* App */,
@@ -279,10 +296,13 @@
 				4B518B502657864C007F4F1F /* UIColor+Ex.swift in Sources */,
 				4B518B4B265765D7007F4F1F /* CLPlacemark+Ex.swift in Sources */,
 				4B518B492657649E007F4F1F /* UITextField+Ex.swift in Sources */,
+				4B1B318526578DFF0012A292 /* Route.swift in Sources */,
+				4B1B318726578E190012A292 /* RouteAnnotation.swift in Sources */,
 				4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */,
 				4BCF48612654EEF60047032F /* BasicViewController.swift in Sources */,
 				4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */,
 				4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */,
+				4B1B318326578DAC0012A292 /* RouteBuilder.swift in Sources */,
 				4B518B4E2657860E007F4F1F /* UIButton+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -136,6 +136,69 @@ class NavSelectionViewController: UIViewController {
         editingTextField?.text = suggestionLabel.text
     }
     
+    @IBAction private func navigateButtonTapped() {
+        view.endEditing(true)
+        
+        navigateButton.isEnabled = false
+        activityIndicatorView.startAnimating()
+        
+        let segment: RouteBuilder.Segment?
+        if let currentLocation = currentPlace?.location {
+            segment = .location(currentLocation)
+        } else if let originValue = startTextField.contents {
+            segment = .text(originValue)
+        } else {
+            segment = nil
+        }
+        
+        let stopSegments: [RouteBuilder.Segment] = [
+            stopTextField.contents
+        ]
+        .compactMap { contents in
+            if let value = contents {
+                return .text(value)
+            } else {
+                return nil
+            }
+        }
+        
+        guard
+            let originSegment = segment,
+            !stopSegments.isEmpty
+        else {
+            showAlert(message: "Please select an origin and a stop.")
+            activityIndicatorView.stopAnimating()
+            navigateButton.isEnabled = true
+            return
+        }
+        
+        RouteBuilder.buildRoute(
+            origin: originSegment,
+            stops: stopSegments,
+            within: currentRegion
+        ) { result in
+            self.navigateButton.isEnabled = true
+            self.activityIndicatorView.stopAnimating()
+            
+            switch result {
+            case .success(let route):
+                print("fetchedRoute", route)
+//                let viewController = DirectionsViewController(route: route)
+//                self.present(viewController, animated: true)
+                
+            case .failure(let error):
+                let errorMessage: String
+                
+                switch error {
+                case .invalidSegment(let reason):
+                    errorMessage = "Error: \(reason)."
+                }
+                
+                self.showAlert(message: errorMessage)
+            }
+        }
+    }
+    
     private func hideSuggestionView(animated: Bool) {
         suggestionContainerTopConstraint.constant = -1 * (suggestionContainerView.bounds.height + 1)
         
@@ -179,6 +242,13 @@ class NavSelectionViewController: UIViewController {
         UIView.animate(withDuration: defaultAnimationDuration) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    private func showAlert(message: String) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        present(alertController, animated: true)
     }
 }
 
