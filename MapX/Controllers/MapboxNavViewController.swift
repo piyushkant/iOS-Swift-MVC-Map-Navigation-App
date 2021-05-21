@@ -13,12 +13,27 @@ import MapboxDirections
 
 var simulationIsEnabled = true
 
-class BasicViewController: UIViewController {
+class MapboxNavViewController: UIViewController {
+    
+    private let route: Route
+    
+    init(route: Route) {
+        self.route = route
+
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let origin = CLLocationCoordinate2DMake(37.77440680146262, -122.43539772352648)
-        let destination = CLLocationCoordinate2DMake(37.76556957793795, -122.42409811526268)
+        let origin = CLLocationCoordinate2DMake(route.origin.placemark.location?.coordinate.latitude ?? 0,
+                                                route.origin.placemark.location?.coordinate.longitude ?? 0)
+        let destination = CLLocationCoordinate2DMake(route.stops.first?.placemark.location?.coordinate.latitude ?? 0,                     route.stops.first?.placemark.location?.coordinate.longitude ?? 0)
+       
         let options = NavigationRouteOptions(coordinates: [origin, destination])
         
         Directions.shared.calculate(options) { [weak self] (session, result) in
