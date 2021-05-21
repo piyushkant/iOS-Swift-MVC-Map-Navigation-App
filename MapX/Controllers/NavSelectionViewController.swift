@@ -182,7 +182,8 @@ class NavSelectionViewController: UIViewController {
             
             switch result {
             case .success(let route):
-                let viewController = MapKitNavViewController(route: route)
+//                let viewController = MapKitNavViewController(route: route)
+                let viewController = MapboxNavViewController(route: route)
                 self.present(viewController, animated: true)
                 
             case .failure(let error):
