@@ -131,9 +131,9 @@ class NavSelectionViewController: UIViewController {
     
     @objc private func suggestionTapped(_ gesture: UITapGestureRecognizer) {
         hideSuggestionView(animated: true)
-        
+                
         editingTextField?.text = suggestionLabel.text
-        editingTextField = nil
+//        editingTextField = nil
     }
     
     private func hideSuggestionView(animated: Bool) {
