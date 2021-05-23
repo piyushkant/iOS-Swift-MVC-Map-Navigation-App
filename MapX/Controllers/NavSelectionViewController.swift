@@ -11,6 +11,7 @@ import CoreLocation
 
 class NavSelectionViewController: UIViewController {
     
+    @IBOutlet private var headerLabel: UILabel!
     @IBOutlet private var inputContainerView: UIView!
     @IBOutlet private var startTextField: UITextField!
     @IBOutlet private var stopTextField: UITextField!
@@ -33,9 +34,21 @@ class NavSelectionViewController: UIViewController {
     private let locationManager = CLLocationManager()
     private let searchCompleter = MKLocalSearchCompleter()
     
+    var sdkType: SDKType = .mapKit
+    
+    init (sdkType: SDKType) {
+        self.sdkType = sdkType
+        
+        super.init(nibName: String(describing: NavSelectionViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         searchCompleter.delegate = self
         
         setupUI()
@@ -59,6 +72,7 @@ class NavSelectionViewController: UIViewController {
     
     // MARK: - UI
     private func setupUI() {
+        self.headerLabel.text = self.sdkType.description
         setupTextFields()
         setupGestures()
         setupNotifications()
@@ -182,8 +196,18 @@ class NavSelectionViewController: UIViewController {
             
             switch result {
             case .success(let route):
-                let viewController = MapKitNavViewController(route: route)
-                self.present(viewController, animated: true)
+                var vc: UIViewController = MapKitNavViewController(route: route)
+                                
+                switch self.sdkType {
+                case .mapbox:
+                    vc = MapboxNavViewController(route: route)
+                case .googleMaps:
+                    vc = GoogleMapsNavViewController(route: route)
+                default:
+                    vc = MapKitNavViewController(route: route)
+                }
+                
+                self.present(vc, animated: true)
                 
             case .failure(let error):
                 let errorMessage: String

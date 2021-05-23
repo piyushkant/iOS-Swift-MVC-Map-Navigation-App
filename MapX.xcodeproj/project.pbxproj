@@ -26,6 +26,9 @@
 		4BCF48562654E9840047032F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48552654E9840047032F /* Assets.xcassets */; };
 		4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48572654E9840047032F /* LaunchScreen.storyboard */; };
 		4BCF48612654EEF60047032F /* MapboxNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48602654EEF60047032F /* MapboxNavViewController.swift */; };
+		4BFA742B265A23A2000AFF05 /* SDKSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */; };
+		4BFA742D265A2409000AFF05 /* SDKSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */; };
+		4BFA742F265A29B5000AFF05 /* SDKType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA742E265A29B5000AFF05 /* SDKType.swift */; };
 		ABF1856AC94F5BFD4C7B4012 /* Pods_MapX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ADFB190E1DE9628EDA4988 /* Pods_MapX.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		4BCF48582654E9840047032F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BCF485A2654E9840047032F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCF48602654EEF60047032F /* MapboxNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxNavViewController.swift; sourceTree = "<group>"; };
+		4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSelectionTableViewController.swift; sourceTree = "<group>"; };
+		4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDKSelectionTableViewController.xib; sourceTree = "<group>"; };
+		4BFA742E265A29B5000AFF05 /* SDKType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKType.swift; sourceTree = "<group>"; };
 		93ADFB190E1DE9628EDA4988 /* Pods_MapX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B944E2CE0E3BBA65069D5A /* Pods-MapX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapX.release.xcconfig"; path = "Target Support Files/Pods-MapX/Pods-MapX.release.xcconfig"; sourceTree = "<group>"; };
 		B48016FD89ACEBE9EA54AE20 /* Pods-MapX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapX.debug.xcconfig"; path = "Target Support Files/Pods-MapX/Pods-MapX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 				4BCF48602654EEF60047032F /* MapboxNavViewController.swift */,
 				4B1B3188265791450012A292 /* MapKitNavViewController.swift */,
 				4B9198442657B6480092C971 /* GoogleMapsNavViewController.swift */,
+				4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */,
+				4BFA742E265A29B5000AFF05 /* SDKType.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 				4B1B318A265792040012A292 /* MapKitNavViewController.xib */,
 				4B518B4526575123007F4F1F /* NavSelectionViewController.xib */,
 				4B9198462657B8000092C971 /* GoogleMapsNavViewController.xib */,
+				4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -257,6 +266,7 @@
 				4B1B318B265792040012A292 /* MapKitNavViewController.xib in Resources */,
 				4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */,
 				4BCF48562654E9840047032F /* Assets.xcassets in Resources */,
+				4BFA742D265A2409000AFF05 /* SDKSelectionTableViewController.xib in Resources */,
 				4B9198472657B8000092C971 /* GoogleMapsNavViewController.xib in Resources */,
 				4B518B4626575123007F4F1F /* NavSelectionViewController.xib in Resources */,
 			);
@@ -334,11 +344,13 @@
 				4B1B318526578DFF0012A292 /* Route.swift in Sources */,
 				4B1B318726578E190012A292 /* RouteAnnotation.swift in Sources */,
 				4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */,
+				4BFA742B265A23A2000AFF05 /* SDKSelectionTableViewController.swift in Sources */,
 				4B1B3189265791450012A292 /* MapKitNavViewController.swift in Sources */,
 				4BCF48612654EEF60047032F /* MapboxNavViewController.swift in Sources */,
 				4B9198412657949A0092C971 /* TimeTravel+Ex.swift in Sources */,
 				4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */,
 				4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */,
+				4BFA742F265A29B5000AFF05 /* SDKType.swift in Sources */,
 				4B9198452657B6480092C971 /* GoogleMapsNavViewController.swift in Sources */,
 				4B1B318326578DAC0012A292 /* RouteBuilder.swift in Sources */,
 				4B518B4E2657860E007F4F1F /* UIButton+Ex.swift in Sources */,

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavSelectionViewController" customModule="MapX" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="Taf-Ff-5iJ" id="StR-TX-90N"/>
+                <outlet property="headerLabel" destination="VUO-gf-DPM" id="MOJ-BQ-CZt"/>
                 <outlet property="inputContainerView" destination="Rhf-Ja-Hlc" id="q7c-db-yXr"/>
                 <outlet property="keyboardAvoidingConstraint" destination="KQf-4w-M2V" id="tFd-rk-JD2"/>
                 <outlet property="navigateButton" destination="cXm-QQ-EH1" id="J1a-UF-7WZ"/>
