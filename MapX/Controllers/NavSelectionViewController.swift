@@ -8,6 +8,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import MapboxCoreNavigation
+import MapboxNavigation
+import MapboxDirections
 
 class NavSelectionViewController: UIViewController {
     
@@ -192,7 +195,6 @@ class NavSelectionViewController: UIViewController {
             within: currentRegion
         ) { result in
             self.navigateButton.isEnabled = true
-            self.activityIndicatorView.stopAnimating()
             
             switch result {
             case .success(let route):
@@ -200,14 +202,16 @@ class NavSelectionViewController: UIViewController {
                                 
                 switch self.sdkType {
                 case .mapbox:
-                    vc = MapboxNavViewController(route: route)
+                    self.openMapboxNavigation(route: route, simulationIsEnabled: true)
                 case .googleMaps:
+                    self.activityIndicatorView.stopAnimating()
                     vc = GoogleMapsNavViewController(route: route)
+                    self.navigationController?.pushViewController(vc, animated: true)
                 default:
+                    self.activityIndicatorView.stopAnimating()
                     vc = MapKitNavViewController(route: route)
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
-                
-                self.present(vc, animated: true)
                 
             case .failure(let error):
                 let errorMessage: String
@@ -218,6 +222,35 @@ class NavSelectionViewController: UIViewController {
                 }
                 
                 self.showAlert(message: errorMessage)
+            }
+        }
+    }
+    
+    private func openMapboxNavigation(route: Route, simulationIsEnabled: Bool) {
+        let origin = CLLocationCoordinate2DMake(route.origin.placemark.location?.coordinate.latitude ?? 0,
+                                                route.origin.placemark.location?.coordinate.longitude ?? 0)
+        let destination = CLLocationCoordinate2DMake(route.stops.first?.placemark.location?.coordinate.latitude ?? 0,                     route.stops.first?.placemark.location?.coordinate.longitude ?? 0)
+       
+        let options = NavigationRouteOptions(coordinates: [origin, destination])
+        
+        Directions.shared.calculate(options) { [weak self] (session, result) in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .success(let response):
+                guard let route = response.routes?.first, let strongSelf = self else {
+                    return
+                }
+                
+                strongSelf.activityIndicatorView.stopAnimating()
+
+                let navigationService = MapboxNavigationService(route: route, routeIndex: 0, routeOptions: options, simulating: simulationIsEnabled ? .always : .onPoorGPS)
+                let navigationOptions = NavigationOptions(navigationService: navigationService)
+                let navigationViewController = NavigationViewController(for: route, routeIndex: 0, routeOptions: options, navigationOptions: navigationOptions)
+                navigationViewController.modalPresentationStyle = .fullScreen
+                navigationViewController.routeLineTracksTraversal = true
+                
+                strongSelf.navigationController?.pushViewController(navigationViewController, animated: true)
             }
         }
     }

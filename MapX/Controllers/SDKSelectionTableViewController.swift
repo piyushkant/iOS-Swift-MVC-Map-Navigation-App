@@ -9,7 +9,7 @@ import UIKit
 
 class SDKSelectionTableViewController: UIViewController {
     
-    private let data = ["Use MapKit", "Use Mapbox", "User Google Maps"]
+    private let data = ["MapKit", "Mapbox", "Google Maps"]
     private let cellIdentifier = "SDKCell"
     
     @IBOutlet private var tableView: UITableView!
@@ -25,6 +25,7 @@ class SDKSelectionTableViewController: UIViewController {
     
     private func setupUI() {
         self.title = "MapX"
+        
         self.tableView.tableFooterView = UIView()
     }
 }
@@ -50,6 +51,10 @@ extension SDKSelectionTableViewController: UITableViewDataSource {
 }
 
 extension SDKSelectionTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Select SDK for navigation:"
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var sdkType: SDKType = .mapKit
