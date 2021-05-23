@@ -249,6 +249,7 @@ class NavSelectionViewController: UIViewController {
                 let navigationViewController = NavigationViewController(for: route, routeIndex: 0, routeOptions: options, navigationOptions: navigationOptions)
                 navigationViewController.modalPresentationStyle = .fullScreen
                 navigationViewController.routeLineTracksTraversal = true
+                navigationViewController.title = "Mapbox"
                 
                 strongSelf.navigationController?.pushViewController(navigationViewController, animated: true)
             }

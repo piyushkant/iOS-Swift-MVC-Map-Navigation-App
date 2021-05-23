@@ -39,6 +39,8 @@ class MapKitNavViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "MapKit"
+        
         distanceFormatter.units = .metric
         
         groupAndRequestDirections()
