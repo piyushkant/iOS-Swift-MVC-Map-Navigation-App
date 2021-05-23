@@ -25,6 +25,9 @@
 		4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48502654E9840047032F /* NavSelectionViewController.swift */; };
 		4BCF48562654E9840047032F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48552654E9840047032F /* Assets.xcassets */; };
 		4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48572654E9840047032F /* LaunchScreen.storyboard */; };
+		4BD142B8265A4BB500AFC334 /* NavHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BD142B6265A4BB500AFC334 /* NavHistory.xcdatamodeld */; };
+		4BD142BA265A533400AFC334 /* NavHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD142B9265A533400AFC334 /* NavHistoryViewController.swift */; };
+		4BD142BC265A542A00AFC334 /* NavHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD142BB265A542A00AFC334 /* NavHistoryViewController.xib */; };
 		4BFA742B265A23A2000AFF05 /* SDKSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */; };
 		4BFA742D265A2409000AFF05 /* SDKSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */; };
 		4BFA742F265A29B5000AFF05 /* SDKType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA742E265A29B5000AFF05 /* SDKType.swift */; };
@@ -52,6 +55,9 @@
 		4BCF48552654E9840047032F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BCF48582654E9840047032F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BCF485A2654E9840047032F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BD142B7265A4BB500AFC334 /* NavHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavHistory.xcdatamodel; sourceTree = "<group>"; };
+		4BD142B9265A533400AFC334 /* NavHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHistoryViewController.swift; sourceTree = "<group>"; };
+		4BD142BB265A542A00AFC334 /* NavHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavHistoryViewController.xib; sourceTree = "<group>"; };
 		4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSelectionTableViewController.swift; sourceTree = "<group>"; };
 		4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDKSelectionTableViewController.xib; sourceTree = "<group>"; };
 		4BFA742E265A29B5000AFF05 /* SDKType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKType.swift; sourceTree = "<group>"; };
@@ -113,7 +119,7 @@
 				4B1B3188265791450012A292 /* MapKitNavViewController.swift */,
 				4B9198442657B6480092C971 /* GoogleMapsNavViewController.swift */,
 				4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */,
-				4BFA742E265A29B5000AFF05 /* SDKType.swift */,
+				4BD142B9265A533400AFC334 /* NavHistoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 		4B518B4426575035007F4F1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4BFA742E265A29B5000AFF05 /* SDKType.swift */,
 				4B1B318426578DFF0012A292 /* Route.swift */,
 				4B1B318626578E190012A292 /* RouteAnnotation.swift */,
 			);
@@ -164,6 +171,7 @@
 				4B518B4526575123007F4F1F /* NavSelectionViewController.xib */,
 				4B9198462657B8000092C971 /* GoogleMapsNavViewController.xib */,
 				4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */,
+				4BD142BB265A542A00AFC334 /* NavHistoryViewController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 				4B518B4126574F26007F4F1F /* Controllers */,
 				4B518B4026574F11007F4F1F /* App */,
 				4BCF485A2654E9840047032F /* Info.plist */,
+				4BD142B6265A4BB500AFC334 /* NavHistory.xcdatamodeld */,
 			);
 			path = MapX;
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD142BC265A542A00AFC334 /* NavHistoryViewController.xib in Resources */,
 				4B1B318B265792040012A292 /* MapKitNavViewController.xib in Resources */,
 				4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */,
 				4BCF48562654E9840047032F /* Assets.xcassets in Resources */,
@@ -341,8 +351,10 @@
 				4B1B318526578DFF0012A292 /* Route.swift in Sources */,
 				4B1B318726578E190012A292 /* RouteAnnotation.swift in Sources */,
 				4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */,
+				4BD142B8265A4BB500AFC334 /* NavHistory.xcdatamodeld in Sources */,
 				4BFA742B265A23A2000AFF05 /* SDKSelectionTableViewController.swift in Sources */,
 				4B1B3189265791450012A292 /* MapKitNavViewController.swift in Sources */,
+				4BD142BA265A533400AFC334 /* NavHistoryViewController.swift in Sources */,
 				4B9198412657949A0092C971 /* TimeTravel+Ex.swift in Sources */,
 				4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */,
 				4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */,
@@ -545,6 +557,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4BD142B6265A4BB500AFC334 /* NavHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4BD142B7265A4BB500AFC334 /* NavHistory.xcdatamodel */,
+			);
+			currentVersion = 4BD142B7265A4BB500AFC334 /* NavHistory.xcdatamodel */;
+			path = NavHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4BCF48412654E9840047032F /* Project object */;
 }

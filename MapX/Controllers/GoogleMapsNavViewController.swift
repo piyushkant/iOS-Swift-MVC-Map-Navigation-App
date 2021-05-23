@@ -30,6 +30,8 @@ class GoogleMapsNavViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("GoogleMapsNavViewController")
+        
         self.title = "Google Maps"
         
         let origin = CLLocationCoordinate2DMake(route.origin.placemark.location?.coordinate.latitude ?? 0,
