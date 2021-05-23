@@ -25,7 +25,6 @@
 		4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48502654E9840047032F /* NavSelectionViewController.swift */; };
 		4BCF48562654E9840047032F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48552654E9840047032F /* Assets.xcassets */; };
 		4BCF48592654E9840047032F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF48572654E9840047032F /* LaunchScreen.storyboard */; };
-		4BCF48612654EEF60047032F /* MapboxNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF48602654EEF60047032F /* MapboxNavViewController.swift */; };
 		4BFA742B265A23A2000AFF05 /* SDKSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */; };
 		4BFA742D265A2409000AFF05 /* SDKSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */; };
 		4BFA742F265A29B5000AFF05 /* SDKType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA742E265A29B5000AFF05 /* SDKType.swift */; };
@@ -53,7 +52,6 @@
 		4BCF48552654E9840047032F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BCF48582654E9840047032F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BCF485A2654E9840047032F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BCF48602654EEF60047032F /* MapboxNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxNavViewController.swift; sourceTree = "<group>"; };
 		4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSelectionTableViewController.swift; sourceTree = "<group>"; };
 		4BFA742C265A2409000AFF05 /* SDKSelectionTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDKSelectionTableViewController.xib; sourceTree = "<group>"; };
 		4BFA742E265A29B5000AFF05 /* SDKType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKType.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				4BCF48502654E9840047032F /* NavSelectionViewController.swift */,
-				4BCF48602654EEF60047032F /* MapboxNavViewController.swift */,
 				4B1B3188265791450012A292 /* MapKitNavViewController.swift */,
 				4B9198442657B6480092C971 /* GoogleMapsNavViewController.swift */,
 				4BFA742A265A23A2000AFF05 /* SDKSelectionTableViewController.swift */,
@@ -346,7 +343,6 @@
 				4BCF48512654E9840047032F /* NavSelectionViewController.swift in Sources */,
 				4BFA742B265A23A2000AFF05 /* SDKSelectionTableViewController.swift in Sources */,
 				4B1B3189265791450012A292 /* MapKitNavViewController.swift in Sources */,
-				4BCF48612654EEF60047032F /* MapboxNavViewController.swift in Sources */,
 				4B9198412657949A0092C971 /* TimeTravel+Ex.swift in Sources */,
 				4BCF484D2654E9840047032F /* AppDelegate.swift in Sources */,
 				4BCF484F2654E9840047032F /* SceneDelegate.swift in Sources */,
