@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import GoogleMaps
 
-@main
+ @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        GMSServices.provideAPIKey("AIzaSyAgqsqLffHotL8uZi8TkDwc29iFEo4QdwE")
         
         return true
     }
@@ -23,7 +26,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-
-
 }
 

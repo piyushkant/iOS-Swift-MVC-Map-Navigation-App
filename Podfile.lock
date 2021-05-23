@@ -1,4 +1,10 @@
 PODS:
+  - Alamofire (4.8.0)
+  - GoogleMaps (5.0.0):
+    - GoogleMaps/Maps (= 5.0.0)
+  - GoogleMaps/Base (5.0.0)
+  - GoogleMaps/Maps (5.0.0):
+    - GoogleMaps/Base
   - Mapbox-iOS-SDK (6.3.0):
     - MapboxMobileEvents (~> 0.10.4)
   - MapboxAccounts (2.3.1)
@@ -24,13 +30,19 @@ PODS:
   - MapboxSpeech (1.0.0)
   - Polyline (5.0.2)
   - Solar (2.1.0)
+  - SwiftyJSON (5.0.1)
   - Turf (1.2.0)
 
 DEPENDENCIES:
+  - Alamofire (= 4.8.0)
+  - GoogleMaps
   - MapboxNavigation (~> 1.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - GoogleMaps
     - Mapbox-iOS-SDK
     - MapboxAccounts
     - MapboxCommon
@@ -42,9 +54,12 @@ SPEC REPOS:
     - MapboxSpeech
     - Polyline
     - Solar
+    - SwiftyJSON
     - Turf
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  GoogleMaps: 600e5e69bdf7f4ed7cac4d6aa96c7ec08a5aa254
   Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
   MapboxAccounts: e40ef575df5d8b7ef33d0504ff2d393f4fde0455
   MapboxCommon: 2c4ef00c10cba35302835423f4d63c6f3dea4bc4
@@ -56,8 +71,9 @@ SPEC CHECKSUMS:
   MapboxSpeech: 4b3aea42e35d056fae1d7ad847a9fc0f412d911e
   Polyline: fce41d72e1146c41c6d081f7656827226f643dff
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Turf: aaa060138b11a8e979a19e6d81091d156a31bc58
 
-PODFILE CHECKSUM: c9bdb22f83ce464c001403c979d9fbd1df061cae
+PODFILE CHECKSUM: 95ca1abdc6aa0c51802f6c49e948be355f8a5ea4
 
 COCOAPODS: 1.10.1
