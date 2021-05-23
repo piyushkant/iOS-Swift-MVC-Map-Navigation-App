@@ -7,5 +7,8 @@ target 'MapX' do
 
   # Pods for MapX
   pod 'MapboxNavigation', '~> 1.0'
+  pod 'GoogleMaps'
+  pod 'Alamofire' , '4.8.0'
+  pod 'SwiftyJSON'
 
 end
