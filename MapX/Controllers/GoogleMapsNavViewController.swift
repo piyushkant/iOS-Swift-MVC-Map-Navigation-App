@@ -43,7 +43,7 @@ class GoogleMapsNavViewController: UIViewController {
         
         let destination = "\(route.stops.first?.placemark.location?.coordinate.latitude ?? 0),\(route.stops.first?.placemark.location?.coordinate.longitude ?? 0)"
         
-        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyAgqsqLffHotL8uZi8TkDwc29iFEo4QdwE"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key="
         
         Alamofire.request(url).responseJSON { response in
             guard let json = try? JSON(data: response.data!) else {return}
