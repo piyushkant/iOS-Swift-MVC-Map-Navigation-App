@@ -15,7 +15,7 @@ class MapKitNavViewController: UIViewController {
     @IBOutlet private var informationLabel: UILabel!
     @IBOutlet private var activityIndicatorView: UIActivityIndicatorView!
     
-    private let cellIdentifier = "Cell"
+    private let cellIdentifier = "NavCell"
     private let distanceFormatter = MKDistanceFormatter()
     
     private let route: Route
@@ -25,11 +25,11 @@ class MapKitNavViewController: UIViewController {
     private var totalDistance: CLLocationDistance = 0
     
     private var groupedRoutes: [(startItem: MKMapItem, endItem: MKMapItem)] = []
-    
+        
     init(route: Route) {
-      self.route = route
-
-      super.init(nibName: String(describing: MapKitNavViewController.self), bundle: nil)
+        self.route = route
+        
+        super.init(nibName: String(describing: MapKitNavViewController.self), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
