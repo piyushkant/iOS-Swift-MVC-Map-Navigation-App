@@ -11,6 +11,7 @@ import CoreLocation
 import MapboxCoreNavigation
 import MapboxNavigation
 import MapboxDirections
+import CoreData
 
 class NavSelectionViewController: UIViewController {
     
@@ -198,6 +199,8 @@ class NavSelectionViewController: UIViewController {
             
             switch result {
             case .success(let route):
+                self.save(route: route)
+                
                 var vc: UIViewController = MapKitNavViewController(route: route)
                                 
                 switch self.sdkType {
@@ -253,6 +256,24 @@ class NavSelectionViewController: UIViewController {
                 
                 strongSelf.navigationController?.pushViewController(navigationViewController, animated: true)
             }
+        }
+    }
+    
+    private func save(route: Route) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Path", in: managedContext)!
+        let path = NSManagedObject(entity: entity, insertInto: managedContext)
+        let label = route.label
+        path.setValue(label, forKeyPath: "label")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
         }
     }
     

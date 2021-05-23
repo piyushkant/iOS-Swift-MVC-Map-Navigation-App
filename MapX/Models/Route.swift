@@ -26,7 +26,7 @@ struct Route {
     
     var label: String {
         if let name = stops.first?.name, stops.count == 1 {
-            return "Directions to \(name)"
+            return "\(origin.name ?? "To") -> \(name)"
         } else {
             let stopNames = stops.compactMap { stop in
                 return stop.name

@@ -25,8 +25,15 @@ class SDKSelectionTableViewController: UIViewController {
     
     private func setupUI() {
         self.title = "MapX"
-        
         self.tableView.tableFooterView = UIView()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "History"), style: .plain, target: self, action: #selector(showNavHistory))
+        self.navigationItem.rightBarButtonItem?.tintColor = .lightGray
+    }
+
+    @objc func showNavHistory() {
+        print("showNavHistory")
+        let vc = NavHistoryViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
